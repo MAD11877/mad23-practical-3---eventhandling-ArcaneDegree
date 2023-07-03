@@ -7,4 +7,6 @@
     <string name="follow_button_text">FOLLOW</string>
     <string name="message_button_text">MESSAGE</string>
     <string name="unfollow_button_text">UNFOLLOW</string>
+    <string name="group_1_text">Group 1</string>
+    <string name="group_2_text">Group 2</string>
 </resources>

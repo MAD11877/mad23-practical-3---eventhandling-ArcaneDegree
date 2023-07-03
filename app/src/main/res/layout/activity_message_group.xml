@@ -1,38 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/MessageGroupActivityLinearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageGroup">
+    android:orientation="vertical"
+    tools:context=".MessageGroupActivity">
 
-    <LinearLayout
+    <Button
+        android:id="@+id/Group1Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/group_1_text"
+        app:cornerRadius="0dp" />
+
+    <Button
+        android:id="@+id/Group2Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="@string/group_2_text"
+        app:cornerRadius="0dp" />
+
+    <FrameLayout
+        android:id="@+id/MessageGroupActivityFrameLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/Group1Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/Group2Button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:text="Button" />
-
-        <FrameLayout
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="16dp">
+        <androidx.fragment.app.FragmentContainerView
+            android:name="sg.edu.np.mad.madpractical.MessageGroupFragment"
+            android:id="@+id/MainMessageGroupFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="6dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginBottom="16dp">
+            tools:layout="@layout/fragment_message_group" />
+    </FrameLayout>
 
-        </FrameLayout>
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
